@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="../styles/global.css">
 </head>
 
 <body>
-  <h1>Form using POST</h1>
-  <!-- Submit the form to `post_welcome.php` using `post` method -->
+  <h1>Form using GET</h1>
+  <!-- Submit the form to `get_welcome.php` using `get` method -->
   <form>
     <div>
       <label for="name">Fullname</label>
