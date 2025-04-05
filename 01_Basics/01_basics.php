@@ -30,7 +30,7 @@
   </section>
 
   <section>
-    <!-- 6. Insert PHP code to insert a `h2` and button -->
+    <!-- 6. Insert PHP code to insert a `h2` and `button` -->
   </section>
 
 </body>
