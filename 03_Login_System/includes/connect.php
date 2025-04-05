@@ -1,0 +1,1 @@
+<!-- Insert PHP code to create a connection with the database -->

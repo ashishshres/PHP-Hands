@@ -1,0 +1,1 @@
+<!-- Insert PHP code to destroy the session to logout the user -->
