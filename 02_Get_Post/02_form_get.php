@@ -11,7 +11,7 @@
 <body>
   <h1>Form using GET</h1>
   <!-- Submit the form to `get_welcome.php` using `get` method -->
-  <form>
+  <form action="get_welcome.php" method="get">
     <div>
       <label for="name">Fullname</label>
       <input type="text" name="fullname" id="name" autocomplete="off" required>

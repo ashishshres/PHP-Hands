@@ -11,7 +11,7 @@
 <body>
   <h1>Form using POST</h1>
   <!-- Submit the form to `post_welcome.php` using `post` method -->
-  <form>
+  <form action="post_welcome.php" method="post">
     <div>
       <label for="name">Fullname</label>
       <input type="text" name="fullname" id="name" autocomplete="off" required>
