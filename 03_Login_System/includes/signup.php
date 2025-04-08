@@ -1,4 +1,28 @@
 <!-- Insert PHP code to retrieve the email and password from the signup form and insert them into the database -->
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  include "connect.php";
+  $email = $_POST["email"];
+  $password = $_POST["password"];
+  $confirmPassword = $_POST["confirm"];
+
+  $sql = "SELECT * FROM users WHERE email = '$email'";
+  $result = mysqli_query($conn, $sql);
+  if (mysqli_num_rows($result) > 0) {
+    print("Already exists");
+  } else {
+    if ($password == $confirmPassword) {
+      $sql = "INSERT INTO users (email, password) VALUES('$email', '$password')";
+      $result = mysqli_query($conn, $sql);
+      if ($result) {
+        print("Success");
+      }
+    } else {
+      print("Error");
+    }
+  }
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">

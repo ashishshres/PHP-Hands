@@ -1,4 +1,29 @@
 <!-- Insert PHP code to retrieve the email and password from the login form and check if the email and password are correct or not. Redirect user to index page if correct  -->
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  include "./includes/connect.php";
+  $email = $_POST["email"];
+  $password = $_POST["password"];
+
+  $sql = "SELECT * FROM users WHERE email = '$email'";
+  $result = mysqli_query($conn, $sql);
+  $isFound = mysqli_num_rows($result);
+
+  if ($isFound == 1) {
+    while ($row = mysqli_fetch_assoc($result)) {
+      if ($password == $row["password"]) {
+        session_start();
+        $_SESSION["loggedin"] = true;
+        header("location: ./includes/home.php");
+      } else {
+        print("Error");
+      }
+    }
+  } else {
+    print("Error");
+  }
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">

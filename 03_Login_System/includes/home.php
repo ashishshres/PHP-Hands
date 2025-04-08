@@ -1,5 +1,11 @@
 <!-- Insert PHP code to start session and check if the user is logged in. If user is not logged in then redirect to the login page otherwise display the index page -->
-
+<?php
+session_start();
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true) {
+  header("location: ../index.php");
+  exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
